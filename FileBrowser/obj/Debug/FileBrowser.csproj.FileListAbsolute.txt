@@ -1,0 +1,9 @@
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe.config
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\bin\Debug\FileBrowser.exe
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\bin\Debug\FileBrowser.pdb
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csprojResolveAssemblyReference.cache
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\obj\Debug\FileBrowser.Form1.resources
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\obj\Debug\FileBrowser.Properties.Resources.resources
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\obj\Debug\FileBrowser.csproj.GenerateResource.Cache
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\obj\Debug\FileBrowser.exe
+C:\Users\WITEK\Desktop\GitHub\FileBrowser\FileBrowser\obj\Debug\FileBrowser.pdb
