@@ -18,20 +18,31 @@ namespace FileBrowser
         {
             listFiles.Clear();
             listView.Items.Clear();
-           
+
+            
             using (FolderBrowserDialog fbd = new FolderBrowserDialog() { Description = "Select your path." })
             {
                 if(fbd.ShowDialog() == DialogResult.OK) 
                 {
                     txtPath.Text = fbd.SelectedPath;
-                    foreach (string item in Directory.GetFiles(fbd.SelectedPath))
-                    {
-                        imageList.Images.Add(System.Drawing.Icon.ExtractAssociatedIcon(item));
-                        FileInfo fi = new FileInfo(item);
-                        listFiles.Add(fi.FullName);
-                        listView.Items.Add(fi.Name,imageList.Images.Count -1 );
-                    }
+                   
+                    
+                        foreach (string item in Directory.GetFiles(fbd.SelectedPath))
+                        {
+                            imageList.Images.Add(System.Drawing.Icon.ExtractAssociatedIcon(item));
+                            FileInfo fi = new FileInfo(item);
+                            listFiles.Add(fi.FullName);
+                            listView.Items.Add(fi.Name, imageList.Images.Count - 1);
+
+
+                        }
+                        if (listFiles.Count == 0)
+                        { 
+                            MessageBox.Show("No files in this directory");
+                        }
+                    
                 }
+                
                 
             }
         }
