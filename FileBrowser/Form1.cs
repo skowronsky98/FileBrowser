@@ -18,7 +18,7 @@ namespace FileBrowser
         {
             listFiles.Clear();
             listView.Items.Clear();
-
+           
             using (FolderBrowserDialog fbd = new FolderBrowserDialog() { Description = "Select your path." })
             {
                 if(fbd.ShowDialog() == DialogResult.OK) 
@@ -32,15 +32,18 @@ namespace FileBrowser
                         listView.Items.Add(fi.Name,imageList.Images.Count -1 );
                     }
                 }
+                
             }
         }
 
         private void listView_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        { 
+          
             if (listView.FocusedItem != null)
             {
                 Process.Start(listFiles[listView.FocusedItem.Index]);
             }
-        }
+            
+        } 
     }
 }

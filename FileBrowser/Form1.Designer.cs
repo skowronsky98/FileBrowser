@@ -92,7 +92,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Skowyr File Browser ";
+            this.Text = "Skowronsky File Browser ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
