@@ -9,6 +9,8 @@ namespace FileBrowser
     public partial class Form1 : Form
     {
         List<string> listFiles = new List<string>();
+        List<string> listDirectories = new List<string>();
+
         public Form1()
         {
             InitializeComponent();
@@ -17,6 +19,7 @@ namespace FileBrowser
         private void btnOpen_Click(object sender, EventArgs e)
         {
             listFiles.Clear();
+            listDirectories.Clear();
             listView.Items.Clear();
 
             
@@ -36,7 +39,17 @@ namespace FileBrowser
 
 
                         }
-                        if (listFiles.Count == 0)
+
+                        foreach (string item in Directory.GetDirectories(fbd.SelectedPath))
+                        {
+                            DirectoryInfo di = new DirectoryInfo(item);
+                            listFiles.Add(di.FullName);
+                            listView.Items.Add(di.Name, imageList.Images.Count - 1);
+
+
+                        }
+
+                    if (listFiles.Count == 0)
                         { 
                             MessageBox.Show("No files in this directory");
                         }
@@ -53,8 +66,10 @@ namespace FileBrowser
             if (listView.FocusedItem != null)
             {
                 Process.Start(listFiles[listView.FocusedItem.Index]);
+                
+
             }
-            
+
         } 
     }
 }
